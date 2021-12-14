@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Final Project</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mrs+Sheppards&family=Rock+Salt&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mrs+Sheppards&family=Rock+Salt&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css" />
-
   </head>
   <body>
     <nav>
@@ -20,52 +22,91 @@
         <li>Mobile Friendly Site</li>
       </ul>
     </nav>
-    <div id="MainScreen" class="BackgroundImg" >
 
-        <!-- add E=MC2 -->
-            <form id="myForm" class="form" action="">
-                <label for="questionField" class="FormText">
-                  Ask a question for an innocuous answer.</label><br>
-                <input type="text" id="Question" formtarget="_blank" placeholder="Ask Here!" name="questionField" maxlength="45"/>
-                <div>
-                <span style="height: 100px; bottom: 20%; color: goldenrod;">Submit Here 	&#128073;</span>
-                <input type="image" name="submit"  value="Submit as normal" src="./img/Coin.png" width="120" height="120" alt="submit">
-                <div class="Coins">
-                  <img src="./img/Coin.png" alt="" class="Coin"/>
-                  <img src="./img/Coin.png" alt="" class="Coin"/>
-              </div>
-                </div>
-                <br>
-                <span class="FormText">All for a penny!</span>
-                
+    <div id="MainScreen" class="BackgroundImg">
 
-                    <!-- main attraction -->
-        
-          <div>
-            <div class="MainImg">
-              <img src="./img/MysticSeerBase01.png" alt="" id="ImgBase" />
-              <img src="./img/MysticSeerHead01.png" alt="" id="ImgHead" class=""/>
-            </div>
+      <!-- add E=MC2 -->
+      <form id="myForm" class="form" action="">
+        <label for="questionField" class="FormText">
+          Ask a question for an innocuous answer.</label
+        ><br />
+        <input
+          type="text"
+          id="Question"
+          formtarget="_blank"
+          placeholder="Ask Here!"
+          name="questionField"
+          maxlength="45"
+        />
+        <div
+          style="
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <label for="submit">Submit Here &#128073;</label>
+          <input
+            type="image"
+            name="submit"
+            value="Submit as normal"
+            src="./img/Coin.png"
+            alt="submit"
+            style="height: 7vh; min-height: 80px"
+          />
+        </div>
+        <div class="Coins">
+          <img src="./img/Coin.png" alt="" class="Coin" />
+          <img src="./img/Coin.png" alt="" class="Coin" />
+        </div>
+        <br />
+        <span class="FormText">All for a penny!</span>
+      </form>
+      <div>
+        <!-- main attraction -->
+        <div style="height: 40vh; min-height: 600px; border: 1px solid red; display: flex;
+        align-items: center;
+        justify-content: space-around;">
+          <div class="MainImg">
+            <img src="./img/MysticSeerBase01.png" alt="" id="ImgBase" />
+            <img
+              src="./img/MysticSeerHead01.png"
+              alt=""
+              id="ImgHead"
+              class=""
+            />
           </div>
-                
-            </form>
-    </div>
-    <div id="BigCard" class="MainCardBackground">
-      <div id="MainCard" >
-        <p id="MainCardHeader" class="CardHeader">MYSTIC<br>SEER</p>
-        <p id="MainCardQuestion"class="CardText"></p>
-        <p id="MainCardAnswer" class="CardText"></p>
-        <button id="MainCardbtn" onclick="CloseCard()">Try Again?</button>
+
+          </div>
+        </div>
       </div>
+      <div id="BigCard" class="MainCardBackground">
+        <div id="MainCard">
+          <p id="MainCardHeader" class="CardHeader">MYSTIC<br />SEER</p>
+          <p id="MainCardQuestion" class="CardText"></p>
+          <p id="MainCardAnswer" class="CardText"></p>
+          <button id="MainCardbtn" onclick="CloseCard()">Try Again?</button>
+        </div>
     </div>
-    <div id="OldCards">
-      <h1>Previous Cards</h1>
-      <div id="Card01" class="Cards" onclick="RecallCard(1)"></div>
-      <div id="Card02" class="Cards" onclick="RecallCard(2)"></div>
-      <div id="Card03" class="Cards" onclick="RecallCard(3)"></div>
-      <div id="Card04" class="Cards" onclick="RecallCard(4)"></div>
-      <div id="Card05" class="Cards" onclick="RecallCard(5)"></div>
-    </div>
+
+
+    <footer>
+      <div id="OldCards">
+        <h1>Previous Cards</h1>
+        <div id="Card01" class="Cards" onclick="RecallCard(1)"></div>
+        <div id="Card02" class="Cards" onclick="RecallCard(2)"></div>
+        <div id="Card03" class="Cards" onclick="RecallCard(3)"></div>
+        <div id="Card04" class="Cards" onclick="RecallCard(4)"></div>
+        <div id="Card05" class="Cards" onclick="RecallCard(5)"></div>
+        <div>
+          <p style="font-size: 25px; font-weight: bolder">
+            Final Javascript Project From Bitwise<br />
+            Created by Angel Ramirez
+          </p>
+        </div>
+      </div>
+    </footer>
 
     <script src="./js/script.js"></script>
   </body>

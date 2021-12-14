@@ -42,17 +42,19 @@ nav img {
   background-size: cover;
 }
 .MainImg {
-  
-  /* position: absolute; */
+  justify-content: center;
+  align-content: center;
   margin-top: 1%;
-  height: fit-content;
-  width: fit-content;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .MainImg img {
+  left:25%;
   position: absolute;
-  width: 25vw;
-  min-width: 300px;
-  max-width: 500px;
+  height: 36vh;
+  min-height: 500px;
+  
 }
 .ImgHead {
   animation: HeadBobbing 1s ease 0s 4 forwards;
@@ -76,10 +78,13 @@ nav img {
   }
 }
 .Coin {
-  width: 20vw;
-  min-width: 200px;
-  max-width: 360px;
+  width: 120px;
+
+  float: left;
   animation: CoinSpin 5s ease 3s infinite alternate;
+}
+.Coin:first-of-type {
+  float: right;
 }
 
 @keyframes CoinSpin {
@@ -121,25 +126,22 @@ nav img {
   background-color: rgba(0, 0, 0, 0);
   border: none;
 }
-.Coin {
-  float: left;
-}
-.Coin:first-of-type {
-  float: right;
-}
+
 form {
-  margin: 0 20%;
-  align-items: center;
+  margin: 0;
   text-align: center;
-  font-size: 3vh;
-  width: fit-content;
-  height: fit-content;
+  font-size: 90px;
+  width: 100%;
+  min-height: 200px;
+  
+  min-height: 80px;
+  color: goldenrod;
 }
 .FormText {
   margin: 0;
   height: fit-content;
   width: fit-content;
-  max-width: 80%;
+  max-width: 50%;
   font-size: 3vw;
   color: goldenrod;
 }
@@ -152,7 +154,7 @@ form {
   background-color: rgba(255, 255, 255, .5);
 }
 .MainCardBackground{ 
-  z-index: 1;  
+  z-index: 2;  
   top: 0px;
   margin: 20%;
   position: absolute;
@@ -189,12 +191,19 @@ form {
 .Cards:empty{
   display: none;}
 #OldCards{
+  background-image: url(/img/NavBackground.jpg.png);
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  bottom: 0px;
   z-index: 1;
-  position: absolute;
-  top: 130px;
-  left: 25px;
-  background-color: lightgrey;
+  /* top: 130px;
+  left: 25px; */
   padding: 5px;
+  margin: 0;
+  color: goldenrod;
+  text-shadow: red 1px 1px 2px;
 }
 .CardHeader{
   font-family: 'Mrs Sheppards', cursive;
@@ -205,14 +214,23 @@ form {
 }
 .MainCardPopUp{
 
-  visibility: visible;
-  animation: CardAnimation 2s ease-in 0s 1 forwards;
+  
+  animation-name: CardAnimation;
+  animation-duration: 2s;
+  animation-timing-function:linear;
+  animation-delay: 4s;
+  animation-iteration-count: 1;
+  animation-direction:normal;
+  animation-fill-mode: forwards;
+}
+.MainCardPopUp2{
+  animation-delay: 0s;
 }
 @keyframes CardAnimation {
-  0% {
+  0% {visibility: visible;
     transform: scale(0) skew(-90deg);
   }
-  100% {
+  100% {visibility: visible;
     transform: scale(1);
   }
 }

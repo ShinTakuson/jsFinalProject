@@ -85,6 +85,7 @@ myForm.addEventListener("submit",(e) => {
 });
 function CloseCard(){
     BigCard.classList.remove("MainCardPopUp");
+    BigCard.classList.remove("MainCardPopUp2");
     MainScreen.classList.remove("disableBackground");
     headAnimation.classList.remove("ImgHead");
     for(let i = 1; i < sessionStorage.length; i++){
@@ -107,11 +108,12 @@ function CloseCard(){
                 break;
         }
     }
-  
+   
 
 }
 
 function RecallCard(x){
+    document.getElementById("BigCard").classList.toggle("MainCardPopUp2");
     BigCard.classList.add("MainCardPopUp");
     Questions = JSON.parse(sessionStorage.getItem(x)).theQuestion;
     Answers = JSON.parse(sessionStorage.getItem(x)).theAnswers;
