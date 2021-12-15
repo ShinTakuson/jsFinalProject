@@ -35,7 +35,7 @@ nav img {
   float: left;
 }
 .BackgroundImg {
-  background-image: url(/img/DinerBackground03.jpg);
+  background-image: url(../img/DinerBackground03.jpg);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -164,7 +164,7 @@ form {
   width: 50vw;
   background-color: white;
   visibility: hidden;
-  background-image: url(/img/NavBackground.jpg);
+  background-image: url(../img/NavBackground.jpg);
   background-size: cover;
 }
 #MainCard{
@@ -191,7 +191,7 @@ form {
 .Cards:empty{
   display: none;}
 #OldCards{
-  background-image: url(/img/NavBackground.jpg.png);
+  background-image: url(../img/NavBackground.jpg.png);
   bottom: 0px;
   display: flex;
   align-items: center;
@@ -242,7 +242,7 @@ form {
   font-size: 4vh;
   font-weight: bolder;
   border-radius: 20px;
-  background-image: url(/img/NavBackground.jpg.png);
+  background-image: url(../img/NavBackground.jpg.png);
   background-clip: text;
 -webkit-background-clip: text;
 color: transparent;
