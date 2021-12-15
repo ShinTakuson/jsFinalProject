@@ -35,7 +35,7 @@ nav img {
   float: left;
 }
 
-    .BackgroundImg {
+.BackgroundImg {
       background-image: url(../img/DinerBackground03.jpg);
       height: 100vh;
       background-position: center;
@@ -129,10 +129,10 @@ nav img {
 form {
   margin: 0;
   text-align: center;
-  font-size: 90px;
+  font-size: 10vh;
+  min-height: 80px;
   width: 100%;
   min-height: 200px;
-  
   min-height: 80px;
   color: goldenrod;
 }
