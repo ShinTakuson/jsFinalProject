@@ -5,7 +5,7 @@ html {
 }
 nav {
   height: 100px;
-  background-image: url(/img/NavBackground.jpg.png);
+  background-image: url(../img/NavBackground.jpg.png);
 }
 nav ul li {
   box-sizing: border-box;
