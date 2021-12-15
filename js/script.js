@@ -113,6 +113,7 @@ function CloseCard(){
 }
 
 function RecallCard(x){
+    BigCard.classList.remove("MainCardPopUp2");
     document.getElementById("BigCard").classList.toggle("MainCardPopUp2");
     BigCard.classList.add("MainCardPopUp");
     Questions = JSON.parse(sessionStorage.getItem(x)).theQuestion;
