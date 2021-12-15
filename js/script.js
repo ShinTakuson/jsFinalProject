@@ -84,6 +84,7 @@ myForm.addEventListener("submit",(e) => {
     //     headAnimation.classList.remove("ImgHead");}
 });
 function CloseCard(){
+    Question.value = "";
     BigCard.classList.remove("MainCardPopUp");
     BigCard.classList.remove("MainCardPopUp2");
     MainScreen.classList.remove("disableBackground");
