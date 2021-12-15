@@ -37,12 +37,12 @@ nav img {
 }
 
 .BackgroundImg {
-      background-image: url(../img/DinerBackground03.jpg);
-      height: 100vh;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    } 
+  background-image: url(../img/DinerBackground03.jpg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .MainImg {
   display: flex;
   justify-content: center;
@@ -54,7 +54,6 @@ nav img {
 .MainImg img {
   position: absolute;
   height: 350px;
-  
 }
 .ImgHead {
   animation: HeadBobbing 1s ease 0s 4 forwards;
@@ -150,10 +149,10 @@ form {
   font-size: 5vh;
   border: none;
   text-align: center;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
-.MainCardBackground{ 
-  z-index: 2;  
+.MainCardBackground {
+  z-index: 2;
   top: 0px;
   margin: 20%;
   position: absolute;
@@ -166,7 +165,7 @@ form {
   background-image: url(../img/NavBackground.jpg);
   background-size: cover;
 }
-#MainCard{
+#MainCard {
   text-align: center;
   position: relative;
   margin: 5% 7%;
@@ -177,19 +176,22 @@ form {
   height: 20vw;
   width: 42vw;
   font-size: 1vw;
-  background-color: white;}
+  background-color: white;
+}
 
-.Cards{ 
+.Cards {
   border: goldenrod 5px groove;
   height: 100px;
   width: 200px;
   background-color: white;
   margin-top: 25px;
   text-align: center;
-  font-size: 12px;}
-.Cards:empty{
-  display: none;}
-#OldCards{
+  font-size: 12px;
+}
+.Cards:empty {
+  display: none;
+}
+#OldCards {
   background-image: url(../img/NavBackground.jpg.png);
   bottom: 0px;
   display: flex;
@@ -204,38 +206,39 @@ form {
   color: goldenrod;
   text-shadow: red 1px 1px 2px;
 }
-.CardHeader{
-  font-family: 'Mrs Sheppards', cursive;
+.CardHeader {
+  font-family: "Mrs Sheppards", cursive;
 }
-.CardText,.Cards{
+.CardText,
+.Cards {
   cursor: pointer;
-  font-family: 'Rock Salt', cursive;
+  font-family: "Rock Salt", cursive;
 }
-.MainCardPopUp{
-
-  
+.MainCardPopUp {
   animation-name: CardAnimation;
   animation-duration: 2s;
-  animation-timing-function:linear;
+  animation-timing-function: linear;
   animation-delay: 4s;
   animation-iteration-count: 1;
-  animation-direction:normal;
+  animation-direction: normal;
   animation-fill-mode: forwards;
 }
-.MainCardPopUp2{
+.MainCardPopUp2 {
   animation-delay: 0s;
 }
 @keyframes CardAnimation {
-  0% {visibility: visible;
+  0% {
+    visibility: visible;
     transform: scale(0) skew(-90deg);
   }
-  100% {visibility: visible;
+  100% {
+    visibility: visible;
     transform: scale(1);
   }
 }
-#MainCardbtn{
+#MainCardbtn {
   cursor: pointer;
-  border:none;
+  border: none;
   height: fit-content;
   width: fit-content;
   font-size: 4vh;
@@ -243,72 +246,80 @@ form {
   border-radius: 20px;
   background-image: url(../img/NavBackground.jpg.png);
   background-clip: text;
--webkit-background-clip: text;
-color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
 }
-.disableBackground{
+.disableBackground {
   filter: grayscale(90);
-  pointer-events: none;}
+  pointer-events: none;
+}
 
-  @media screen and (max-width:700px) {
-    .Coin{display:none;
-    }
-    nav{display:none;
-    }
-    .FormText {
-      margin: 0;
-      height: fit-content;
-      width: fit-content;
-      max-width: 50%;
-      font-size: 5vw;
-      color: goldenrod;
-      }
-  .submitMain{flex-direction: column;
+@media screen and (max-width: 700px) {
+  .Coin {
+    display: none;
   }
-  .submitText01{display:none;
+  nav {
+    display: none;
   }
-  .submitText02:after{content:"Submit Here 👇";
+  .FormText {
+    margin: 0;
+    height: fit-content;
+    width: fit-content;
+    max-width: 50%;
+    font-size: 5vw;
+    color: goldenrod;
   }
-  
+  .submitMain {
+    flex-direction: column;
+  }
+  .submitText01 {
+    display: none;
+  }
+  .submitText02:after {
+    content: "Submit Coin 👇";
+  }
+
   .MainCardBackground {
-      z-index: 2;
-      top: 30vh;
-      margin: 0 5%;
-      position: absolute;
-      text-align: center;
-      border: 6px solid black;
-      height: 25vh;
-      width: 80vw;
-      background-color: white;
-      visibility: hidden;
-      background-image: url(../img/NavBackground.jpg);
-      background-size: cover;
+    z-index: 2;
+    top: 30vh;
+    margin: 0 5%;
+    position: absolute;
+    text-align: center;
+    border: 6px solid black;
+    height: 25vh;
+    width: 80vw;
+    background-color: white;
+    visibility: hidden;
+    background-image: url(../img/NavBackground.jpg);
+    background-size: cover;
   }
   #MainCard {
-      text-align: center;
-      position: relative;
-      margin: 5% 5%;
-      display: block;
-      text-align: center;
-      align-content: center;
-      border: 6px solid black;
-      height: 20vh;
-      width: 67vw;
-      font-size: 12px;
-      background-color: white;
+    text-align: center;
+    position: relative;
+    margin: 5% 5%;
+    display: block;
+    text-align: center;
+    align-content: center;
+    border: 6px solid black;
+    height: 20vh;
+    width: 67vw;
+    font-size: 12px;
+    background-color: white;
   }
-  
+
   #MainCardbtn {
-      margin-top: 20px;
-      cursor: pointer;
-      border: none;
-      height: fit-content;
-      width: fit-content;
-      font-size: 4vh;
-      font-weight: bolder;
-      border-radius: 20px;
-      background: white;
-      color:black;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    height: fit-content;
+    width: fit-content;
+    font-size: 4vh;
+    font-weight: bolder;
+    border-radius: 20px;
+    background: white;
+    color: black;
   }
-  
+  #OldCards {
+    flex-direction: column;
   }
+}
