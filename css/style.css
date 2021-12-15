@@ -53,7 +53,8 @@ nav img {
 }
 .MainImg img {
   position: absolute;
-  height: 350px;
+  height: 600px;
+  margin-top: 50px;
 }
 .ImgHead {
   animation: HeadBobbing 1s ease 0s 4 forwards;
@@ -322,4 +323,9 @@ form {
   #OldCards {
     flex-direction: column;
   }
+  .MainImg img {
+    position: absolute;
+    height: 350px;
+    margin:0;
+}
 }
