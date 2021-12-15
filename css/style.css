@@ -3,6 +3,7 @@ html {
   box-sizing: content-box;
   height: 100%;
 }
+
 nav {
   height: 100px;
   background-image: url(../img/NavBackground.jpg.png);
@@ -249,3 +250,65 @@ color: transparent;
   filter: grayscale(90);
   pointer-events: none;}
 
+  @media screen and (max-width:700px) {
+    .Coin{display:none;
+    }
+    nav{display:none;
+    }
+    .FormText {
+      margin: 0;
+      height: fit-content;
+      width: fit-content;
+      max-width: 50%;
+      font-size: 5vw;
+      color: goldenrod;
+      }
+  .submitMain{flex-direction: column;
+  }
+  .submitText01{display:none;
+  }
+  .submitText02:after{content:"Submit Here 👇";
+  }
+  
+  .MainCardBackground {
+      z-index: 2;
+      top: 30vh;
+      margin: 0 5%;
+      position: absolute;
+      text-align: center;
+      border: 6px solid black;
+      height: 25vh;
+      width: 80vw;
+      background-color: white;
+      visibility: hidden;
+      background-image: url(../img/NavBackground.jpg);
+      background-size: cover;
+  }
+  #MainCard {
+      text-align: center;
+      position: relative;
+      margin: 5% 5%;
+      display: block;
+      text-align: center;
+      align-content: center;
+      border: 6px solid black;
+      height: 20vh;
+      width: 67vw;
+      font-size: 12px;
+      background-color: white;
+  }
+  
+  #MainCardbtn {
+      margin-top: 20px;
+      cursor: pointer;
+      border: none;
+      height: fit-content;
+      width: fit-content;
+      font-size: 4vh;
+      font-weight: bolder;
+      border-radius: 20px;
+      background: white;
+      color:black;
+  }
+  
+  }
