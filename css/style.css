@@ -193,6 +193,7 @@ form {
   text-align: center;
   font-size: 12px;
 }
+/* if cards are emtpy this will not display them. Which allows for the cards to magically appear at the bottom. Doing this way and not visibility allows for the section to divide itself evenly when a card appears. Visibility option keeps the space occupied.  */
 .Cards:empty {
   display: none;
 }
@@ -214,11 +215,12 @@ form {
 .CardHeader {
   font-family: "Mrs Sheppards", cursive;
 }
-.CardText,
-.Cards {
+/* old question cards. added a pointer to indicate they can be clicked on */
+.CardText, .Cards {
   cursor: pointer;
   font-family: "Rock Salt", cursive;
 }
+/* main card popup, animation. I did short hand but something broke it. I just laid everything out */
 .MainCardPopUp {
   animation-name: CardAnimation;
   animation-duration: 2s;
@@ -228,9 +230,11 @@ form {
   animation-direction: normal;
   animation-fill-mode: forwards;
 }
+/* allows for recalling old cards to pop up. this removes the delay for the card popup */
 .MainCardPopUp2 {
   animation-delay: 0s;
 }
+/* keyframe for popup card animation. kept it hidden until the bobble head finishes his thing. */
 @keyframes CardAnimation {
   0% {
     visibility: visible;
@@ -254,11 +258,12 @@ form {
   -webkit-background-clip: text;
   color: transparent;
 }
+/* greys out the background when submit button is pressed, and resets when removed or the card popup is closed*/
 .disableBackground {
   filter: grayscale(90);
   pointer-events: none;
 }
-/* media frame */
+/* media screen for smaller devices, didnt have time to work on all types */
 @media screen and (max-width: 700px) {
   .Coin {
     display: none;

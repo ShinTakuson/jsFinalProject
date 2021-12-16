@@ -1,6 +1,6 @@
 const myForm = document.getElementById("myForm");
 let headAnimation = document.getElementById("ImgHead");
-
+// counting function and also loading the information onto session storage.
 function cardCounter() {
     if(typeof(Storage) !== "undefined") {
         Questions = document.getElementById("Question").value;
@@ -73,22 +73,26 @@ function cardCounter() {
 // add the random text and apply to eventlistener
 myForm.addEventListener("submit",(e) => {
     e.preventDefault();
-    // console.log("Form has been submitted")
+    // adding head animation once the submit button was pressed. This bobbles the bobble head.
     headAnimation.classList.add("ImgHead");
+    // session logged how many times they submitted a question or just submitted
     cardCounter();
- 
+    //adding animation to these calsses. 
     MainScreen.classList.add("disableBackground")
     BigCard.classList.add("MainCardPopUp");
-    // setTimeout(TheCorner,4500);
-    // function TheCorner(){
-    //     headAnimation.classList.remove("ImgHead");}
 });
+// When the card pops up, i needed something to close it and reset a few things.
 function CloseCard(){
+    // value is reset to default
     Question.value = "";
+    // animation is removed and allowed for reset on next go
     BigCard.classList.remove("MainCardPopUp");
     BigCard.classList.remove("MainCardPopUp2");
+    // the background grey out is reset to default
     MainScreen.classList.remove("disableBackground");
+    // head animation is removed and allowed to reset on next go
     headAnimation.classList.remove("ImgHead");
+    // storing information into session. Let it only ccount up to 5 and reset back to 1 on 6.
     for(let i = 1; i < sessionStorage.length; i++){
         const cardNum = sessionStorage.key(i); 
         switch (cardNum){
@@ -112,11 +116,13 @@ function CloseCard(){
    
 
 }
-
+// needed a different animate delay for recalling the cards previously used. 
 function RecallCard(x){
     BigCard.classList.remove("MainCardPopUp2");
+    //this was interesting to use. toggle it on and off. left it in versus add just to see the difference.
     document.getElementById("BigCard").classList.toggle("MainCardPopUp2");
     BigCard.classList.add("MainCardPopUp");
+    // retrieving the in sesseion storage to display onto the cards.
     Questions = JSON.parse(sessionStorage.getItem(x)).theQuestion;
     Answers = JSON.parse(sessionStorage.getItem(x)).theAnswers;
     document.getElementById("MainCardQuestion").innerHTML = Questions;
